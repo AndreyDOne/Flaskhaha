@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Weather API{% endblock %}
+
+{% block content %}
+    <h2>Weather API Activity</h2>
+    <p>Check the weather of any Philippine city.</p>
+
+    <form method="POST" action="{{ url_for('render_weather_results') }}">
+        <label for="city">Enter City Name:</label>
+        <input type="text" id="city" name="city" placeholder="e.g., Pakil" required>
+        <button type="submit">Get Weather</button>
+    </form>
+{% endblock %}

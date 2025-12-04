@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+   <h2>Your Portfolio Dashboard</h2>
+   <p> Username :  <strong>{{ username }}</strong></p>
+   <p>Student ID : <strong>{{ student_id }}</strong></p>
+   <p>Here you can manage your portfolio activities.</p>
+
+   <br>
+
+   <h3>Your Activities</h3>
+   <ul class="activity-list">
+       <li><strong>Activity 1:</strong> Flask Homepage</li>
+       <li><strong>Activity 2:</strong> Inheritance</li>
+       <li><strong>Activity 3:</strong> ORM Database</li>
+       <li>
+            <a href="{{ url_for('weather_API') }}" class="activity-link" title="Try Activity 4: API">
+                <strong>Activity 4:</strong> API
+            </a>
+       </li>
+   </ul>
+
+{% endblock %}
